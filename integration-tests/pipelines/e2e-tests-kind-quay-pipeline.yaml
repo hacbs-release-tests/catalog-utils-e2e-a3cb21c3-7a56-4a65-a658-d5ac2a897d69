@@ -206,7 +206,7 @@ spec:
               secretName: $(params.cluster-access-secret)
         steps:
           - name: deploy-local-quay
-            image: quay.io/konflux-ci/release-service-utils@sha256:0b35e861c83b9c1141e3a8d7a8924cc9c4ae0b09dc87938971eee66ee9b9aaaf
+            image: quay.io/redhat-user-workloads-stage/konflux-release-service-tenant/release-service-utils@sha256:af3870b2e79e2be2d6e60061070a4aa557bf15cd403a34fca40ea2f7e70726c0
             env:
               - name: KUBECONFIG
                 value: /tmp/cluster-kubeconfig/kubeconfig
@@ -276,7 +276,7 @@ spec:
               secretName: $(params.cluster-access-secret)
         steps:
           - name: run-test
-            image: quay.io/konflux-ci/release-service-utils@sha256:0b35e861c83b9c1141e3a8d7a8924cc9c4ae0b09dc87938971eee66ee9b9aaaf
+            image: quay.io/redhat-user-workloads-stage/konflux-release-service-tenant/release-service-utils@sha256:af3870b2e79e2be2d6e60061070a4aa557bf15cd403a34fca40ea2f7e70726c0
             env:
               - name: KUBECONFIG
                 value: /tmp/cluster-kubeconfig/kubeconfig
